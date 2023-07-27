@@ -1,0 +1,87 @@
+//everything that is reusable – buttons, navbars, cards, and so on
+.btn {
+    background: $btn-gradiant;
+    color: $white-color;
+    border-radius: $btn-radius;
+    border: none;
+    padding: 15px
+}
+
+.btn-nouveau {
+    background: $light-green-color;
+    color: $dark-green-color;
+    font-weight: $medium-font-weight;
+    border: none;
+    padding: 7px 12px;
+    position: absolute;
+}
+
+
+///cards
+
+
+.fonctionnement__card {
+    @include flex-row ($width: 90%);
+    padding: 25px 0;
+    background-color: $bg-light-grey-color;
+    border-radius: $fonctionnement-radius;
+    box-shadow: $fonctionnement-shadow;
+    font-weight: $medium-font-weight;
+
+    .fonctionnement__stepNumber {
+        @include flex-row($justify-content: unset);
+        position: absolute;
+        
+        .fa-circle {
+            color: $primary-color;
+            font-size: 24px;
+        }
+
+        .stepNumber {
+       position: absolute;
+        color: $white-color;
+        // color: red;
+        }
+
+    }
+
+    .card__fonctionnement__content {
+        @include flex-row($justify-content:unset);
+        gap: $default-gap;
+        padding-left: 45px;
+
+        .fonctionnement__text {
+            font-size: $small-title-font-size;
+            font-weight: $medium-font-weight;;
+        }
+    }
+}
+
+.card__restaurant {
+   @include flex-col-start;
+   width: 85%;
+    border-radius: $card-radius;
+    background-color: $white-color;
+    
+    .restaurant__img {
+        border-radius: $card-radius $card-radius 0  0  ;
+        height: 190px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .restaurant__content {
+        @include flex-row($justify-content: space-between);
+        padding-bottom: 20px;
+     
+        .restaurant__description {
+            @include flex-col-start;
+            gap: 5px;
+            padding-left: 15px;
+        }
+        .restaurant__favorite {
+            font-size: 24px;
+            padding: 0 24px
+        }
+    }
+
+}

@@ -1,0 +1,147 @@
+// all the Sass code handling the layout, which is the container and grid systems
+body{
+//    add font-family
+margin: 0;
+box-sizing: border-box;
+
+font-family: "Roboto", sans-serif, "Shrikhand" ;
+}
+
+.mainContainer{
+    max-width: 1440px;
+}
+
+h1, 
+h2, 
+h3, 
+p {
+    margin: $default-margin;
+}
+
+@media (min-width: 320px) {
+
+.mainContainer{
+    @include flex-column
+}
+
+h1 {
+    font-size: $h1-font-size-mobile + 4;
+    font-weight: $bold-font-weight;
+}
+//revoir "extends"
+.header{
+    @include flex-column;
+
+    & .presentation {
+        @extend .header;
+        text-align: center;
+        padding: $padding-main-content;
+        gap: 20px;
+        background-color: $bg-light-grey-color;
+
+        & .subtitle__presentation {
+            font-size: $medium-title-font-size;
+            font-weight: $light-font-weight;
+
+        }
+    }
+}
+
+.navBar {
+    @include flex-column; 
+
+    .nav__logo {
+        padding: 15px 10px;  
+    }
+    .nav__location {
+        @include flex-row;
+        padding: 15px;
+        gap: 17px;
+        background-color: $bg-medium-grey-color;
+        font-size: $small-title-font-size;
+        font-weight: $normal-font-weight;
+    }
+  
+}
+
+.main {
+    @include flex-column; 
+    
+    .fonctionnement {
+        padding: $padding-main-content;
+        gap: $default-gap * 2;
+        @include flex-col-start;
+
+        &__title {
+            @include section-title;
+        }
+
+        &__list {
+            @include flex-column;
+            gap: $default-gap + 10;
+            padding: 10px
+        }
+
+    }
+
+    ///cards restaurants
+    .restaurants {
+        @include flex-col-start;
+        justify-content: center;
+        background-color: $bg-light-grey-color;
+        padding: 45px 0;
+
+        &__title {
+            @include section-title;
+            
+        }
+       
+        &__cards {
+            @include flex-column;
+            gap: 18px;
+            
+        }
+    }
+}
+
+.footer {
+    @include flex-col-start;
+    background-color: $bg-dark-grey-color;
+    color: $white-color;
+    padding: 24px 0 24px 24px;
+    gap: $default-gap;
+    
+    &__logo {
+        width: 100px;
+        filter: invert(1);
+    }
+
+    &__content {
+        @include flex-col-start;
+        gap: 7px;
+    }
+
+}
+
+//logo footer
+.link__logo {
+    @include flex-row($justify-content: unset);
+    gap: 11px;
+}
+
+}
+
+
+
+@media (min-width: 1024px) {
+
+    .footer {
+        @include flex-row
+    }}
+
+
+
+
+
+
+

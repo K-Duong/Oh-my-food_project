@@ -22,6 +22,8 @@ $h1-font-size-mobile: 24px;
 $big-title-font-size-mobile:24px;
 $medium-title-font-size:18px;
 $small-title-font-size: 16px;
+$normal-text-font-size: 16px;
+$btn-text-font-size: 16px;
 $subtitle-font-size: 17px;
 $bold-font-weight: 700;
 $medium-font-weight: 500;
@@ -45,7 +47,7 @@ $fonctionnement-radius: 20px;
 $card-radius: 15px;
 
 ////btn
-$btn-gradiant: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+$btn-gradiant: linear-gradient(175deg,  #FF79DA 0%, #9356DC 100%);
 $btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 $fonctionnement-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 

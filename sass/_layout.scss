@@ -24,24 +24,27 @@ p {
     @include flex-column
 }
 
-h1 {
-    font-size: $h1-font-size-mobile + 4;
-    font-weight: $bold-font-weight;
-}
 //revoir "extends"
 .header{
     @include flex-column;
 
-    & .presentation {
+    .presentation {
         @extend .header;
         text-align: center;
         padding: $padding-main-content;
         gap: 20px;
         background-color: $bg-light-grey-color;
 
-        & .subtitle__presentation {
+        &__title {
+            font-size: $h1-font-size-mobile;
+            font-weight: $bold-font-weight;
+            width: 65%;
+        }
+
+        &__subtitle {
             font-size: $medium-title-font-size;
             font-weight: $light-font-weight;
+            width: 85%
 
         }
     }
@@ -50,16 +53,23 @@ h1 {
 .navBar {
     @include flex-column; 
 
-    .nav__logo {
-        padding: 15px 10px;  
+    .nav__logo {   
+        width: 45%;
+        padding: 22px 0 15px;
     }
     .nav__location {
         @include flex-row;
-        padding: 15px;
+        padding: 15px 0;
         gap: 17px;
         background-color: $bg-medium-grey-color;
+        color: $bg-dark-grey-color;
         font-size: $small-title-font-size;
         font-weight: $normal-font-weight;
+
+        &__text {
+            font-size: $normal-text-font-size;
+            font-weight: $medium-font-weight;
+        }
     }
   
 }
@@ -79,7 +89,7 @@ h1 {
         &__list {
             @include flex-column;
             gap: $default-gap + 10;
-            padding: 10px
+            padding: 10px 0;
         }
 
     }
@@ -106,18 +116,22 @@ h1 {
 
 .footer {
     @include flex-col-start;
+
     background-color: $bg-dark-grey-color;
     color: $white-color;
-    padding: 24px 0 24px 24px;
+    // padding: 24px 0 24px 24px;
     gap: $default-gap;
     
     &__logo {
         width: 100px;
+        padding: 24px 0 0 24px;
         filter: invert(1);
     }
 
     &__content {
         @include flex-col-start;
+        width: 80%;
+        padding: 0 24px 24px 24px;
         gap: 7px;
     }
 

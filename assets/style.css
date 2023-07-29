@@ -1,9 +1,17 @@
 .btn {
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   color: #FFFFFF;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
   border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  padding: 15px;
+  padding: 15px 19px;
+}
+
+.btn__presentation {
+  margin: 10px 0 15px;
 }
 
 .btn-nouveau {
@@ -19,7 +27,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90%;
+  width: 85%;
   padding: 25px 0;
   background-color: #F6F6F6;
   border-radius: 20px;
@@ -31,6 +39,7 @@
   flex-direction: row;
   justify-content: unset;
   width: 100%;
+  width: 93%;
   position: absolute;
 }
 .fonctionnement__card .fonctionnement__stepNumber .fa-circle {
@@ -38,8 +47,13 @@
   font-size: 24px;
 }
 .fonctionnement__card .fonctionnement__stepNumber .stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6%;
   position: absolute;
   color: #FFFFFF;
+  bottom: 4px;
 }
 .fonctionnement__card .card__fonctionnement__content {
   display: flex;
@@ -61,7 +75,7 @@
   align-items: unset;
   width: 100%;
   gap: 20px;
-  width: 85%;
+  width: 90%;
   border-radius: 15px;
   background-color: #FFFFFF;
 }
@@ -118,10 +132,6 @@ p {
     align-items: center;
     width: 100%;
   }
-  h1 {
-    font-size: 28px;
-    font-weight: 700;
-  }
   .header, .header .presentation {
     display: flex;
     flex-direction: column;
@@ -135,9 +145,15 @@ p {
     gap: 20px;
     background-color: #F6F6F6;
   }
-  .header .presentation .subtitle__presentation {
+  .header .presentation__title {
+    font-size: 24px;
+    font-weight: 700;
+    width: 65%;
+  }
+  .header .presentation__subtitle {
     font-size: 18px;
     font-weight: 300;
+    width: 85%;
   }
   .navBar {
     display: flex;
@@ -147,18 +163,24 @@ p {
     width: 100%;
   }
   .navBar .nav__logo {
-    padding: 15px 10px;
+    width: 45%;
+    padding: 22px 0 15px;
   }
   .navBar .nav__location {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding: 15px;
+    padding: 15px 0;
     gap: 17px;
     background-color: #EAEAEA;
+    color: #353535;
     font-size: 16px;
     font-weight: 400;
+  }
+  .navBar .nav__location__text {
+    font-size: 16px;
+    font-weight: 500;
   }
   .main {
     display: flex;
@@ -189,7 +211,7 @@ p {
     align-items: center;
     width: 100%;
     gap: 30px;
-    padding: 10px;
+    padding: 10px 0;
   }
   .main .restaurants {
     display: flex;
@@ -224,11 +246,11 @@ p {
     gap: 20px;
     background-color: #353535;
     color: #FFFFFF;
-    padding: 24px 0 24px 24px;
     gap: 20px;
   }
   .footer__logo {
     width: 100px;
+    padding: 24px 0 0 24px;
     filter: invert(1);
   }
   .footer__content {
@@ -238,6 +260,8 @@ p {
     align-items: unset;
     width: 100%;
     gap: 20px;
+    width: 80%;
+    padding: 0 24px 24px 24px;
     gap: 7px;
   }
   .link__logo {

@@ -17,12 +17,20 @@
 }
 
 .btn-nouveau {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+  
     background: $light-green-color;
     color: $dark-green-color;
     font-weight: $medium-font-weight;
+    
     border: none;
+    border-radius: $btn-nouveau-radius;
     padding: 7px 12px;
-    position: absolute;
+    margin: 12px;
+
+    
 }
 
 
@@ -75,13 +83,20 @@
    width: 90%;
     border-radius: $card-radius;
     background-color: $white-color;
-    
-    .restaurant__img {
-        border-radius: $card-radius $card-radius 0  0  ;
-        height: 190px;
-        width: 100%;
-        object-fit: cover;
+
+    .restaurant__img__btn {
+        display: flex;
+        flex-direction: column;
+
+        .restaurant__img {
+            border-radius: $card-radius $card-radius 0  0  ;
+            height: 190px;
+            width: 100%;
+            object-fit: cover;
+        }
     }
+    
+    
     .restaurant__content {
         @include flex-row($justify-content: space-between);
         padding-bottom: 20px;

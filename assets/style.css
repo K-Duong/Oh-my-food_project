@@ -15,12 +15,16 @@
 }
 
 .btn-nouveau {
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
   background: #99E2D0;
   color: #008766;
   font-weight: 500;
   border: none;
+  border-radius: 2px;
   padding: 7px 12px;
-  position: absolute;
+  margin: 12px;
 }
 
 .fonctionnement__card {
@@ -79,7 +83,11 @@
   border-radius: 15px;
   background-color: #FFFFFF;
 }
-.card__restaurant .restaurant__img {
+.card__restaurant .restaurant__img__btn {
+  display: flex;
+  flex-direction: column;
+}
+.card__restaurant .restaurant__img__btn .restaurant__img {
   border-radius: 15px 15px 0 0;
   height: 190px;
   width: 100%;

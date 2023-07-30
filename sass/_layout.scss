@@ -21,12 +21,12 @@ p {
 @media (min-width: 320px) {
 
 .mainContainer{
-    @include flex-column
+    @include flex-col-center;
 }
 ////Header et footer sont pareils dans toutes les pages
 //////revoir "extends"
 .header{
-    @include flex-column;
+    @include flex-col-center;
 
     .presentation {
         @extend .header;
@@ -51,7 +51,8 @@ p {
 }
 
 .footer {
-    @include flex-col-start;
+    @include flex-col-unset;
+    width: 100%;
     background-color: $bg-dark-grey-color;
     color: $white-color;
     gap: $default-gap;
@@ -63,7 +64,7 @@ p {
     }
 
     &__content {
-        @include flex-col-start;
+        @include flex-col-unset;
         width: 80%;
         padding: 0 24px 24px 24px;
         gap: 7px;
@@ -71,21 +72,24 @@ p {
 
 }
 
-//////logo footer
-.link__logo {
-    @include flex-row($justify-content: unset);
+//////icons footer
+.footer__content__icon {
+    @include flex-row-unset;
     gap: 11px;
 }
 
+//////nav Bar
 .navBar {
-    @include flex-column; 
+    @include flex-col-center;
+    width: 100%; 
 
     .nav__logo {   
         width: 45%;
         padding: 22px 0 15px;
     }
     .nav__location {
-        @include flex-row;
+        @include flex-row-center;
+        width: 100%;
         padding: 15px 0;
         gap: 17px;
         background-color: $bg-medium-grey-color;
@@ -103,19 +107,22 @@ p {
 
 //////Partie uniquement pour la page d'accueil
 .main {
-    @include flex-column; 
+    @include flex-col-center;
+    width: 100%;
     
     .fonctionnement {
+        @include flex-col-unset;
+        width: 100%;
         padding: $padding-main-content;
         gap: $default-gap * 2;
-        @include flex-col-start;
+        
 
         &__title {
             @include section-title;
         }
 
         &__list {
-            @include flex-column;
+            @include flex-col-center;
             gap: $default-gap + 10;
             padding: 10px 0;
         }
@@ -124,8 +131,10 @@ p {
 
     //////cards restaurants
     .restaurants {
-        @include flex-col-start;
-        justify-content: center;
+        @include flex-col-center;
+        align-items: unset;
+        width: 100%;
+        gap: 20px;
         background-color: $bg-light-grey-color;
         padding: 45px 0;
 
@@ -135,7 +144,7 @@ p {
         }
        
         &__cards {
-            @include flex-column;
+            @include flex-col-center;
             gap: 18px;
             
         }
@@ -145,14 +154,15 @@ p {
 //////Partie uniquement pour la page des recettes
 ///////
 .main__restaurant {
-    @include flex-col-start;
+    @include flex-col-unset;
+    gap: 20px;
     border: 1px solid black;
     border-radius: $card-radius $card-radius 0  0;
     
 }
 
 .restaurant__header {
-    @include flex-row;
+    @include flex-row-unset;
     width: 90%;
     justify-content: space-between;
     
@@ -175,7 +185,7 @@ p {
 @media (min-width: 1024px) {
 
     .footer {
-        @include flex-row
+        @include flex-row-unset;
     }}
 
 

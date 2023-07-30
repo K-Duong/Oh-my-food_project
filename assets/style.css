@@ -39,10 +39,6 @@
   font-weight: 500;
 }
 .fonctionnement__card .fonctionnement__stepNumber {
-  display: flex;
-  flex-direction: row;
-  justify-content: unset;
-  width: 100%;
   width: 93%;
   position: absolute;
 }
@@ -52,8 +48,8 @@
 }
 .fonctionnement__card .fonctionnement__stepNumber .stepNumber {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
   width: 6%;
   position: absolute;
   color: #FFFFFF;
@@ -62,10 +58,7 @@
 .fonctionnement__card .card__fonctionnement__content {
   display: flex;
   flex-direction: row;
-  justify-content: unset;
-  width: 100%;
   gap: 20px;
-  padding-left: 45px;
 }
 .fonctionnement__card .card__fonctionnement__content .fonctionnement__text {
   font-size: 16px;
@@ -75,13 +68,10 @@
 .card__restaurant {
   display: flex;
   flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-  width: 100%;
-  gap: 20px;
   color: #101010;
   text-decoration: none;
   width: 90%;
+  gap: 20px;
   border-radius: 15px;
   background-color: #FFFFFF;
 }
@@ -99,16 +89,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   padding-bottom: 20px;
 }
 .card__restaurant .restaurant__content .restaurant__description {
   display: flex;
   flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-  width: 100%;
-  gap: 20px;
   gap: 5px;
   padding-left: 15px;
 }
@@ -116,14 +101,16 @@
   font-size: 24px;
   padding: 0 24px;
 }
-.card__restaurant .card__menus {
+
+.card__menus {
   display: flex;
   flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-  width: 100%;
-  gap: 20px;
   width: 90%;
+}
+.card__menus .card__menus__title {
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: #99E2D0 3px solid;
 }
 
 body {
@@ -149,14 +136,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
   .header, .header .presentation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
   .header .presentation {
     text-align: center;
@@ -177,10 +162,7 @@ p {
   .footer {
     display: flex;
     flex-direction: column;
-    justify-content: unset;
-    align-items: unset;
     width: 100%;
-    gap: 20px;
     background-color: #353535;
     color: #FFFFFF;
     gap: 20px;
@@ -193,19 +175,13 @@ p {
   .footer__content {
     display: flex;
     flex-direction: column;
-    justify-content: unset;
-    align-items: unset;
-    width: 100%;
-    gap: 20px;
     width: 80%;
     padding: 0 24px 24px 24px;
     gap: 7px;
   }
-  .link__logo {
+  .footer__content__icon {
     display: flex;
     flex-direction: row;
-    justify-content: unset;
-    width: 100%;
     gap: 11px;
   }
   .navBar {
@@ -243,14 +219,11 @@ p {
     width: 100%;
   }
   .main .fonctionnement {
-    padding: 40px 0;
-    gap: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: unset;
-    align-items: unset;
     width: 100%;
-    gap: 20px;
+    padding: 40px 0;
+    gap: 40px;
   }
   .main .fonctionnement__title {
     font-size: 24px;
@@ -262,18 +235,17 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     gap: 30px;
     padding: 10px 0;
   }
   .main .restaurants {
     display: flex;
     flex-direction: column;
-    justify-content: unset;
+    justify-content: center;
+    align-items: center;
     align-items: unset;
     width: 100%;
     gap: 20px;
-    justify-content: center;
     background-color: #F6F6F6;
     padding: 45px 0;
   }
@@ -287,15 +259,11 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     gap: 18px;
   }
   .main__restaurant {
     display: flex;
     flex-direction: column;
-    justify-content: unset;
-    align-items: unset;
-    width: 100%;
     gap: 20px;
     border: 1px solid black;
     border-radius: 15px 15px 0 0;
@@ -303,8 +271,6 @@ p {
   .restaurant__header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
     width: 90%;
     justify-content: space-between;
   }
@@ -322,8 +288,6 @@ p {
   .footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
   }
 }
 

@@ -37,7 +37,8 @@
 ///cards
 ///////Page d'accueil////////
 .fonctionnement__card {
-    @include flex-row ($width: 85%);
+    @include flex-row-center;
+    width: 85%;
     padding: 25px 0;
     background-color: $bg-light-grey-color;
     border-radius: $fonctionnement-radius;
@@ -45,7 +46,6 @@
     font-weight: $medium-font-weight;
 
     .fonctionnement__stepNumber {
-        @include flex-row($justify-content: unset);
         width: 93%;
         position: absolute;
         
@@ -55,9 +55,7 @@
         }
 
         .stepNumber {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-row-center;
             width: 6%;
             position: absolute;
             color: $white-color;
@@ -67,9 +65,8 @@
     }
 
     .card__fonctionnement__content {
-        @include flex-row($justify-content:unset);
+        @include flex-row-unset;
         gap: $default-gap;
-        padding-left: 45px;
 
         .fonctionnement__text {
             font-size: $small-title-font-size;
@@ -79,9 +76,11 @@
 }
 
 .card__restaurant {
-   @include flex-col-start;
+   @include flex-col-unset;
+   
    @include default-hyperlink;
    width: 90%;
+   gap: 20px;
     border-radius: $card-radius;
     background-color: $white-color;
 
@@ -99,11 +98,12 @@
     
     
     .restaurant__content {
-        @include flex-row($justify-content: space-between);
+        @include flex-row-unset;
+        justify-content: space-between;
         padding-bottom: 20px;
      
         .restaurant__description {
-            @include flex-col-start;
+            @include flex-col-unset;
             gap: 5px;
             padding-left: 15px;
         }
@@ -113,18 +113,19 @@
         }
     }
 
-    .card__menus {
-        @include flex-col-start;
-        width: 90%;
-        
-
-        // .card__menus__title {
-        //     @include menu-title;
-        // }
-
-    }
+    
 
 }
 
 //////Page des restaurants//////
 
+.card__menus {
+        @include flex-col-unset;
+        width: 90%;
+        
+
+        .card__menus__title {
+            @include menu-title;
+        }
+
+    }

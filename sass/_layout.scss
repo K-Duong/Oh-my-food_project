@@ -23,8 +23,8 @@ p {
 .mainContainer{
     @include flex-column
 }
-
-//revoir "extends"
+////Header et footer sont pareils dans toutes les pages
+//////revoir "extends"
 .header{
     @include flex-column;
 
@@ -48,6 +48,33 @@ p {
 
         }
     }
+}
+
+.footer {
+    @include flex-col-start;
+    background-color: $bg-dark-grey-color;
+    color: $white-color;
+    gap: $default-gap;
+    
+    &__logo {
+        width: 100px;
+        padding: 24px 0 0 24px;
+        filter: invert(1);
+    }
+
+    &__content {
+        @include flex-col-start;
+        width: 80%;
+        padding: 0 24px 24px 24px;
+        gap: 7px;
+    }
+
+}
+
+//////logo footer
+.link__logo {
+    @include flex-row($justify-content: unset);
+    gap: 11px;
 }
 
 .navBar {
@@ -74,6 +101,7 @@ p {
   
 }
 
+//////Partie uniquement pour la page d'accueil
 .main {
     @include flex-column; 
     
@@ -94,7 +122,7 @@ p {
 
     }
 
-    ///cards restaurants
+    //////cards restaurants
     .restaurants {
         @include flex-col-start;
         justify-content: center;
@@ -114,33 +142,30 @@ p {
     }
 }
 
-.footer {
+//////Partie uniquement pour la page des recettes
+///////
+.main__restaurant {
     @include flex-col-start;
-
-    background-color: $bg-dark-grey-color;
-    color: $white-color;
-    // padding: 24px 0 24px 24px;
-    gap: $default-gap;
+    border: 1px solid black;
+    border-radius: $card-radius $card-radius 0  0;
     
-    &__logo {
-        width: 100px;
-        padding: 24px 0 0 24px;
-        filter: invert(1);
-    }
-
-    &__content {
-        @include flex-col-start;
-        width: 80%;
-        padding: 0 24px 24px 24px;
-        gap: 7px;
-    }
-
 }
 
-//logo footer
-.link__logo {
-    @include flex-row($justify-content: unset);
-    gap: 11px;
+.restaurant__header {
+    @include flex-row;
+    width: 90%;
+    justify-content: space-between;
+    
+    .restaurant__name {
+        font-size: $h1-font-size-mobile + 4;
+        font-family: 'Shrikhand';
+        font-weight: $normal-font-weight;
+        padding-left: $padding-left-default;
+    }
+
+    .restaurant__favorite__page {
+        font-size: $h1-font-size-mobile ;
+    }
 }
 
 }

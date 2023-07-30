@@ -79,6 +79,8 @@
   align-items: unset;
   width: 100%;
   gap: 20px;
+  color: #101010;
+  text-decoration: none;
   width: 90%;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -113,6 +115,15 @@
 .card__restaurant .restaurant__content .restaurant__favorite {
   font-size: 24px;
   padding: 0 24px;
+}
+.card__restaurant .card__menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  width: 100%;
+  gap: 20px;
+  width: 90%;
 }
 
 body {
@@ -162,6 +173,40 @@ p {
     font-size: 18px;
     font-weight: 300;
     width: 85%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    width: 100%;
+    gap: 20px;
+    background-color: #353535;
+    color: #FFFFFF;
+    gap: 20px;
+  }
+  .footer__logo {
+    width: 100px;
+    padding: 24px 0 0 24px;
+    filter: invert(1);
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    width: 100%;
+    gap: 20px;
+    width: 80%;
+    padding: 0 24px 24px 24px;
+    gap: 7px;
+  }
+  .link__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    width: 100%;
+    gap: 11px;
   }
   .navBar {
     display: flex;
@@ -245,39 +290,32 @@ p {
     width: 100%;
     gap: 18px;
   }
-  .footer {
+  .main__restaurant {
     display: flex;
     flex-direction: column;
     justify-content: unset;
     align-items: unset;
     width: 100%;
     gap: 20px;
-    background-color: #353535;
-    color: #FFFFFF;
-    gap: 20px;
+    border: 1px solid black;
+    border-radius: 15px 15px 0 0;
   }
-  .footer__logo {
-    width: 100px;
-    padding: 24px 0 0 24px;
-    filter: invert(1);
-  }
-  .footer__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: unset;
-    align-items: unset;
-    width: 100%;
-    gap: 20px;
-    width: 80%;
-    padding: 0 24px 24px 24px;
-    gap: 7px;
-  }
-  .link__logo {
+  .restaurant__header {
     display: flex;
     flex-direction: row;
-    justify-content: unset;
+    justify-content: center;
     width: 100%;
-    gap: 11px;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .restaurant__header .restaurant__name {
+    font-size: 28px;
+    font-family: "Shrikhand";
+    font-weight: 400;
+    padding-left: 24px;
+  }
+  .restaurant__header .restaurant__favorite__page {
+    font-size: 24px;
   }
 }
 @media (min-width: 1024px) {

@@ -27,6 +27,7 @@ p {
 //////revoir "extends"
 .header{
     @include flex-col-center;
+    width: 100%;
 
     .presentation {
         @extend .header;
@@ -84,7 +85,7 @@ p {
     width: 100%; 
 
     .nav__logo {   
-        width: 45%;
+        width: $width-logo;
         padding: 22px 0 15px;
     }
     .nav__location {
@@ -153,14 +154,53 @@ p {
 
 //////Partie uniquement pour la page des recettes
 ///////
+/// 
+.nav__logo__page {
+    width: $width-logo;
+}
 .main__restaurant {
     @include flex-col-unset;
-    gap: 20px;
-    border: 1px solid black;
+    width: 100%;
     border-radius: $card-radius $card-radius 0  0;
+
+    &__img {
+        z-index: 0;
+    }
     
+    &__content {
+        @include flex-col-unset;
+        width: 100%;
+        gap: 40px;
+        padding:  30px 0 40px; 
+        margin-top: -45px;
+        background-color: $bg-light-grey-color;
+        border-radius: $card-radius + 15 $card-radius + 15 0  0;
+        z-index: 2 ;
+   
+    }
 }
 
+.header__restaurant{
+    @include flex-row-center;
+    margin: 24px 0 10px 0;
+    width: 100%;
+
+    .navBar__restaurant {
+        @include flex-row-center;
+        width: 100%;
+
+        .fa-arrow-left {
+            align-self: baseline;
+            position: absolute;
+            font-size: 24px;
+            left: 17px;
+        }
+    }
+}
+
+.svg__arrow__back {
+    @include default-hyperlink;
+}
 .restaurant__header {
     @include flex-row-unset;
     width: 90%;
@@ -175,7 +215,15 @@ p {
 
     .restaurant__favorite__page {
         font-size: $h1-font-size-mobile ;
+        align-self: center;
     }
+}
+
+.restaurant__menu {
+    @include flex-col-unset;
+    gap: 40px;
+    padding: 0 10px;
+    
 }
 
 }

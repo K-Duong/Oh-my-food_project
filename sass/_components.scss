@@ -38,12 +38,14 @@
 ///////Page d'accueil////////
 .fonctionnement__card {
     @include flex-row-center;
-    width: 85%;
-    padding: 25px 0;
     background-color: $bg-light-grey-color;
     border-radius: $fonctionnement-radius;
     box-shadow: $fonctionnement-shadow;
-    font-weight: $medium-font-weight;
+    font-weight: $medium-font-weight; 
+
+    ///media query for mobile
+    width: 85%;
+    padding: 25px 0;
 
     .fonctionnement__stepNumber {
         width: 93%;
@@ -121,11 +123,68 @@
 
 .card__menus {
         @include flex-col-unset;
-        width: 90%;
-        
+        width: 100%;
+            gap: 15px;
 
         .card__menus__title {
             @include menu-title;
         }
 
+        .card__dish__checked {
+            @include flex-row-unset;
+
+            .card__dish__price {
+                @include flex-row-unset;
+                justify-content: space-between;
+                align-self: center;
+                background-color: $white-color;
+                width: 89%;
+                padding: 15px;
+                border-radius: $card-radius;
+                box-shadow: $card-restaurant-shadow;
+
+                .dish__title {
+                    font-size: $medium-title-font-size;
+                    font-weight: 600;
+                }
+
+                .dish__description {
+                    font-size: 15px;
+                    font-weight: $light-font-weight;
+                }
+                .dish__price {
+                    align-self: end;
+                    font-weight: $bold-font-weight;
+                }
+            }
+
+            .dish__checked {
+                display: flex; 
+                justify-content: center; 
+                align-self: stretch; 
+                width: 18%;
+                background-color: $light-green-color; 
+                border-radius: 0 15px 15px 0;
+                    
+                .fa-circle-check {
+                    align-self: center;
+                    color:$white-color;   
+                    font-weight: $bold-font-weight;
+                    border: none;
+                    font-size: 18px;
+                }
+            }
+                
+                
     }
+}
+
+.dish__checked.dish__checked--hidden {
+        display: none;
+    }
+
+
+.btn__order {
+    align-self: center;
+    width: 50%;
+}

@@ -42,6 +42,9 @@ $default-gap: 20px;
 $padding-main-content: 40px 0;
 $padding-left-default: 24px;
 
+///width
+$width-logo : 45%;
+
 //// border-radius
 $btn-radius: 25px;
 $btn-nouveau-radius: 2px;
@@ -52,6 +55,7 @@ $card-radius: 15px;
 $btn-gradiant: linear-gradient(175deg,  #FF79DA 0%, #9356DC 100%);
 $btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 $fonctionnement-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+$card-restaurant-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10);
 
 ////photos des restaurants
 $img-restaurants: (img1: restaurant--1, img2: restaurant--2, img3: restaurant--3, img4: restaurant--4);
@@ -84,29 +88,12 @@ $img-restaurants: (img1: restaurant--1, img2: restaurant--2, img3: restaurant--3
 @mixin flex-row-unset {
     display:flex;
     flex-direction: row;
-    // justify-content: flex-start;
 }
 
-// @mixin flex-column($justify-content: center, $align-items: center, $width: 100%){
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: $justify-content;
-//     align-items: $align-items;
-//     width: $width;
-// }
-
-// @mixin flex-row($justify-content: center, $width: 100%) {
-//     display:flex;
-//     flex-direction: row;
-//     justify-content: $justify-content;
-//     width: $width;
-// }
 
 @mixin flex-col-unset() {
-
    display: flex;
     flex-direction: column;
-    // gap: $default-gap;
 }
 
 @mixin default-hyperlink {
@@ -117,8 +104,9 @@ $img-restaurants: (img1: restaurant--1, img2: restaurant--2, img3: restaurant--3
 @mixin menu-title {
     font-size: $small-title-font-size;
     font-weight: $light-font-weight;
-    border-bottom: $secondary-color 3px solid;
-    
+    text-decoration: $secondary-color solid underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
 }
 
 

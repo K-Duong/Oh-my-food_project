@@ -18,28 +18,81 @@ p {
     margin: $default-margin;
 }
 
-@media (min-width: 320px) {
+// @media (min-width: $breakpoint-mobile) {
 
 .mainContainer{
     @include flex-col-center;
 }
 ////Header et footer sont pareils dans toutes les pages
-//////revoir "extends"
+
 .header{
     @include flex-col-center;
     width: 100%;
+
+    //////nav Bar
+    .navBar {
+        @include flex-col-center;
+        width: 100%; 
+
+        .nav__logo {   
+           
+            @media (min-width: $breakpoint-mobile) {
+             width: $width-logo;   
+             padding: 22px 0 15px;  
+            }
+            @media (min-width: $breakpoint-desktop) {
+                width: 20%;
+                padding: 30px 0 32px;
+            }
+
+
+             ///mobile
+           
+        }
+
+        .nav__location {
+            @include flex-row-center;
+            width: 100%;
+            padding: 15px 0;
+            gap: 17px;
+            background-color: $bg-medium-grey-color;
+            color: $bg-dark-grey-color;
+            font-size: $small-title-font-size;
+            font-weight: $normal-font-weight;
+
+            &__text {
+                font-size: $normal-text-font-size;
+                font-weight: $medium-font-weight;
+            }
+        }
+    
+    }
 
     .presentation {
         @extend .header;
         text-align: center;
         padding: $padding-main-content;
-        gap: 20px;
         background-color: $bg-light-grey-color;
 
+        @media (min-width: $breakpoint-mobile) {
+            gap: 20px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            gap: 30px;
+        }
+
         &__title {
-            font-size: $h1-font-size-mobile;
+            
             font-weight: $bold-font-weight;
             width: 65%;
+            @media (min-width: $breakpoint-mobile) {
+                font-size: $h1-font-size-mobile;
+            }
+            
+            @media (min-width: $breakpoint-desktop) {
+                font-size: $h1-font-size-desktop;
+            }
         }
 
         &__subtitle {
@@ -52,59 +105,94 @@ p {
 }
 
 .footer {
-    @include flex-col-unset;
-    width: 100%;
+    ///mobile
+    @media (min-width: $breakpoint-mobile) {
+        @include flex-col-unset;
+        width: 100%;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 30px 0;
+        // justify-content: end;
+        align-items: flex-end;
+        
+    }
+    
     background-color: $bg-dark-grey-color;
     color: $white-color;
     gap: $default-gap;
     
     &__logo {
         width: 100px;
-        padding: 24px 0 0 24px;
         filter: invert(1);
+
+        @media (min-width: $breakpoint-mobile) {
+          padding: 24px 0 0 24px;
+         }
+       
+         @media (min-width: $breakpoint-mobile) {
+            padding: 24px 24px 0 24px;
+           }
     }
 
     &__content {
-        @include flex-col-unset;
         width: 80%;
-        padding: 0 24px 24px 24px;
-        gap: 7px;
-    }
-
-}
-
-//////icons footer
-.footer__content__icon {
-    @include flex-row-unset;
-    gap: 11px;
-}
-
-//////nav Bar
-.navBar {
-    @include flex-col-center;
-    width: 100%; 
-
-    .nav__logo {   
-        width: $width-logo;
-        padding: 22px 0 15px;
-    }
-    .nav__location {
-        @include flex-row-center;
-        width: 100%;
-        padding: 15px 0;
-        gap: 17px;
-        background-color: $bg-medium-grey-color;
-        color: $bg-dark-grey-color;
-        font-size: $small-title-font-size;
-        font-weight: $normal-font-weight;
-
-        &__text {
-            font-size: $normal-text-font-size;
+        
+       .link__icon {
+            margin-right: 5px;
+            width: 25px;
+       }
+               
+        .link--bold {
             font-weight: $medium-font-weight;
+            // width: 170px;
+            // gap: 5px;
         }
+
+        .link--light {
+            font-weight: $normal-font-weight;
+            // gap: 10px;
+            
+        }
+        @media (min-width: $breakpoint-mobile) {
+           @include flex-col-unset;
+           gap: 7px;
+           padding: 0 24px 24px 24px;
+
+           .links--bold, 
+           .links--light {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+           }
+           
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 0;
+            justify-content: flex-end;
+            gap: 35px;
+
+            .links--bold,
+            .links--light {
+            @include flex-row-unset;
+            // gap: 10px;
+        }
+         }
+        
+        
+        
     }
-  
+
 }
+
+
+
+
 
 //////Partie uniquement pour la page d'accueil
 .main {
@@ -226,15 +314,15 @@ p {
     
 }
 
-}
+// }
 
 
 
-@media (min-width: 1024px) {
+// @media (min-width: 1024px) {
 
-    .footer {
-        @include flex-row-unset;
-    }}
+//     .footer {
+//         @include flex-row-unset;
+//     }}
 
 
 

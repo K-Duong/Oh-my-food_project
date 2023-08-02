@@ -19,6 +19,7 @@ $light-blue-color: #89C8FA;
 
 ///font
 $h1-font-size-mobile: 24px;
+$h1-font-size-desktop: 40px;
 $big-title-font-size-mobile:24px;
 $medium-title-font-size:18px;
 $small-title-font-size: 16px;
@@ -50,6 +51,11 @@ $btn-radius: 25px;
 $btn-nouveau-radius: 2px;
 $fonctionnement-radius: 20px;
 $card-radius: 15px;
+
+////breakpoints
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 ////btn
 $btn-gradiant: linear-gradient(175deg,  #FF79DA 0%, #9356DC 100%);

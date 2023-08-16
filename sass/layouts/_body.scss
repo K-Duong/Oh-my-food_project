@@ -1,0 +1,25 @@
+body {
+    // @include flex-col-unset;
+    @include display-flex(column);
+    font-family: Roboto, Shrikhand, Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+a:hover, 
+a:visited, 
+a:hover:visited {
+  color: $black-color;
+}

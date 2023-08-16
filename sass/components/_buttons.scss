@@ -1,0 +1,57 @@
+.btn {
+
+    background-image: linear-gradient(175deg,  #FF79DA 0%, #9356DC 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+    background-size: 250%;
+    background-position: right;
+    color: $white-color;
+    font-family: 'Roboto';
+    font-size: $btn-text-font-size;
+    font-weight: $normal-font-weight;
+    border-radius: $btn-radius;
+    box-shadow: $btn-shadow;
+    border: none;
+    padding: 15px 19px;
+    cursor: pointer;
+    transition: all .5s;
+   
+}
+
+.btn:hover {
+    box-shadow: 4px 10px 15px 0px rgba(0, 0, 0, 0.35);
+    background-position: left;
+    transform: scale(1.1);
+}
+
+.btn__presentation {
+    @media (min-width: $breakpoint-mobile) {
+    margin-bottom: 15px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+    margin: 0;
+    }
+}
+
+.btn__order {
+    margin: 40px 0;
+    align-self: center;
+    font-weight: $medium-font-weight;
+    padding: 15px 50px;
+}
+
+.btn-nouveau {
+    display: flex;
+    // TODO: Test with transform ?
+    position: absolute;
+    align-self: flex-end;
+  
+    background: $light-green-color;
+    color: $dark-green-color;
+    font-weight: $medium-font-weight;
+    
+    border: none;
+    border-radius: $btn-nouveau-radius;
+    padding: 7px 12px;
+    margin: 12px;
+
+}

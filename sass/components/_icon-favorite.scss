@@ -1,0 +1,37 @@
+.icon-favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // transition: all .5s;
+    
+    .fa-heart--empty {
+        color: $black-color;
+        font-size: 21px;
+        // transition: all .5s;
+    }
+
+    .fa-heart--fill{
+        position: absolute;
+        font-size: 21px;
+        background-image: $btn-gradiant;
+        background-size:cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transform: scale(1.1);
+        opacity: 0;
+        transition: all .2s;
+        
+    }
+}
+
+.icon-favorite:hover {
+    .fa-heart--empty {
+       opacity: 0;
+    // display: none;
+    }
+    .fa-heart--fill{
+        opacity: 1;
+    
+    }
+}

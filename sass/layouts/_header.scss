@@ -1,0 +1,32 @@
+
+.header {
+    @include display-flex(row, center); 
+
+    &__logo {
+        background-color: $white-color;
+        @extend .header;
+
+        &__img {
+            width: 45%;
+        }
+
+        @media (min-width: $breakpoint-mobile) {
+            padding: 15px
+        }
+        @media (min-width: $breakpoint-desktop) {
+            padding: 30px
+        }
+    }
+
+    // for arrow back to home page from restaurants pages
+    &__restaurant__navBar {
+        @include display-flex(row, center, center); 
+
+        .svg__arrow__back {
+            font-size: 24px;
+            position: absolute;
+            left: 25px;
+        }
+    }
+}
+

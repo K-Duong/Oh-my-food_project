@@ -1,0 +1,70 @@
+.restaurant__card {
+    border-radius: $card-radius; 
+    background-color: $white-color;
+    transition: all .5s;
+    
+    .restaurant__header {
+        @include display-flex(column);
+
+        .restaurant__img {
+            border-radius: $card-radius $card-radius 0  0  ;
+            height: 190px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .restaurant__description {
+        @include display-flex(row);
+        justify-content: space-between;
+        padding: 15px;
+
+        .restaurant__favorite {
+            align-self: center;
+            font-size: 21px
+        }    
+    }
+
+    // .fa-stack {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     // transition: all .5s;
+        
+    //     .fa-heart--empty {
+    //         color: $black-color;
+    //         font-size: 21px;
+    //         // transition: all .5s;
+    //     }
+
+    //     .fa-heart--fill{
+    //         background-image: $btn-gradiant;
+    //         background-size:cover;
+    //         background-clip: text;
+    //         -webkit-background-clip: text;
+    //         color: transparent;
+    //         transform: scale(1.4);
+    //         opacity: 0;
+    //         transition: all .5s;
+            
+    //     }
+    // }
+
+    // .fa-stack:hover {
+    //     .fa-heart--empty {
+    //     //    opacity: 0;
+    //     display: none;
+    //     }
+    //     .fa-heart--fill{
+    //         opacity: 1;
+        
+    //     }
+    // }
+
+}
+
+.restaurant__card:hover {
+    box-shadow: 15px 20px 15px 0px rgba(0, 0, 0, 0.15);
+    // transform: scale(1.05);
+    
+}

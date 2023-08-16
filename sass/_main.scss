@@ -1,0 +1,36 @@
+@import "_bases.scss";
+
+//LAYOUTS
+    //body
+    @import "layouts/body";
+    //header
+    @import "layouts/header";
+    //footer
+    @import "layouts/footer";
+
+    //home page
+    @import "layouts/homePage/main-hp-presentation";
+    @import "layouts/homePage/main-hp-function";
+    @import "layouts/homePage/main-hp-restaurants";
+    
+    //restaurant pages
+    @import "layouts/pages/restaurant-img";
+    @import "layouts/pages/restaurant-header";
+    @import "layouts/pages/restaurant-menus";
+
+
+
+
+//COMPONENTS
+    //Buttons
+    @import "components/buttons";
+    // Icon favorite
+    @import "components/icon-favorite";
+    //Home page-card fonctionnement
+    @import "components/cards-function";
+    //Home page-cards restaurant
+    @import "components/cards-restaurants";
+    //Restaurant pages-cards menu
+    @import "components/cards-menu";
+
+

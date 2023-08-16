@@ -1,0 +1,67 @@
+.homePage__function {
+    display: flex;
+//   @include display-flex(column);
+//       row-gap: 25px;
+        &__box {
+    //   @include flex-col-unset;
+    @include display-flex(column);
+      row-gap: 25px;
+    }
+  }
+
+@media (min-width: $breakpoint-mobile) {
+    .homePage__function {
+    padding: 45px 0 45px 25px;
+    // padding: 45px 0 45px 25px;
+    // width: 100%;
+
+        &__box {
+            width: 100%;
+            //TODO: peut on faire une function pour définir si breakpoint <320, pas de padding-right?
+            padding-right: 25px;
+            }
+        
+        .function__description {
+            @include display-flex(column);
+            row-gap: 25px;
+            padding-right: 20px;
+        }
+
+    }
+}
+ 
+@media (min-width: $breakpoint-desktop) { 
+    .homePage__function {
+     padding: 50px 50px;
+     justify-content: center;
+
+    //  padding-right: 0;
+
+    //      .function__description {
+    //          @include display-flex(row);
+    //          column-gap: 25px;
+    //          justify-content: space-between;
+    //       }
+
+     &__box {
+        padding-right: 0;
+
+        .function__description {
+            @include display-flex(row);
+            column-gap: 25px;
+            justify-content: space-between;
+         }
+     }
+   }
+}
+
+@media (min-width: $breakpoint-large-desktop) { 
+    .homePage__function {
+           padding: 50px 180px;
+        //    max-width: 1440px; 
+
+            &__box {
+            max-width: 1440px; 
+            }
+    }
+}

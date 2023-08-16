@@ -1,0 +1,37 @@
+.restaurant__menus {
+
+    @include display-flex(column);
+    row-gap: 40px;
+   
+    .card__menus {
+        padding: 0 15px;
+        @include display-flex(column);
+        row-gap: 15px;
+    
+        
+    
+        &__header {
+            @include display-flex(column);
+            row-gap: 5px;
+            
+            &__title {
+            font-size: $small-title-font-size;
+            font-weight: $light-font-weight;
+            }
+    
+            &__title--underline {
+                width: 40px;
+                border-top: 3px solid $light-green-color ;
+            }
+    
+        }
+    }
+    @media (min-width: $breakpoint-mobile) {
+      // height: 275px;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      // max-width: 1055px ;
+      width: 70%;
+    margin: auto;
+    } 
+  }

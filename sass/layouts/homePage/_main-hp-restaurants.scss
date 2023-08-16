@@ -1,0 +1,56 @@
+.homePage__restaurants {
+    background-color: $bg-light-grey-color;
+    @include display-flex(row);
+  
+    &__box {
+    @include display-flex(column);
+    row-gap: 25px;
+    }
+  }
+  
+// TODO: repetition of code for responsive design, how to fix that ? create a function(param = breakpoint) if else statement to set padding ?
+@media (min-width: $breakpoint-mobile) {  
+    .homePage__restaurants {
+        padding: 45px 25px;
+
+        &__box {
+            width: 100%;
+
+            .restaurants__cards {
+                @include display-flex(column);
+                row-gap: 25px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {  
+    .homePage__restaurants {
+        justify-content: center;
+        padding: 30px 50px;
+
+        &__box {
+
+            .restaurants__cards {
+                @include display-flex(row);
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 50px;
+              
+                .restaurants__links {
+                  width: 45%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-large-desktop) { 
+    .homePage__restaurants{
+          padding: 30px 180px;
+          &__box {
+            max-width: 1440px;
+          }
+    }
+  
+   }

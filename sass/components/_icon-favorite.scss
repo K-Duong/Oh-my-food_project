@@ -2,11 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     // transition: all .5s;
     
     .fa-heart--empty {
         color: $black-color;
         font-size: 21px;
+        // cursor: pointer;
         // transition: all .5s;
     }
 
@@ -20,7 +22,8 @@
         color: transparent;
         transform: scale(1.1);
         opacity: 0;
-        transition: all .2s;
+        // transition: all .2s;
+        // cursor: pointer;
         
     }
 }

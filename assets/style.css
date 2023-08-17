@@ -476,6 +476,7 @@ a:hover:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .icon-favorite .fa-heart--empty {
   color: #101010;
@@ -491,7 +492,6 @@ a:hover:visited {
   color: transparent;
   transform: scale(1.1);
   opacity: 0;
-  transition: all 0.2s;
 }
 
 .icon-favorite:hover .fa-heart--empty {
@@ -621,6 +621,10 @@ a:hover:visited {
   align-items: unset;
   width: 100%;
   padding: 15px;
+  column-gap: 15px;
+}
+.card__dish__info .dish__content {
+  flex-grow: 1;
 }
 .card__dish__info .dish__content .dish__title {
   font-size: 18px;
@@ -652,9 +656,13 @@ a:hover:visited {
   font-size: 18px;
 }
 
+.card__dish:hover .card__dish__info {
+  width: calc(85% - 15px);
+  max-width: calc(85% - 15px);
+}
 @media (min-width: 320px) {
   .card__dish:hover .card__dish__info .dish__content .dish__description {
-    width: 99%;
+    max-width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

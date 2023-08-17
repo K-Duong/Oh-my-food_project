@@ -8,11 +8,12 @@
         @include display-flex(row, space-between);
         width: 100%;
         padding: 15px;
+        column-gap: 15px;
         // flex-grow: 1;
         // flex-shrink: 1;
 
         .dish__content {
-
+            flex-grow: 1;
             .dish__title {
                 font-size: $medium-title-font-size;
             }
@@ -52,19 +53,21 @@
 }
 
 .card__dish:hover {
-    .card__dish__info{
-        // max-width: 85%;
-        .dish__content{
+    .card__dish__info {
+        width: calc(85% - 15px);
+        max-width: calc(85% - 15px);
+
+        .dish__content {
             .dish__description{
-            // @media (max-width:$breakpoint-large-mobile) {
-            @media (min-width:$breakpoint-mobile) {
-            width: 99%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            }
-           
-        }
+                // @media (max-width:$breakpoint-large-mobile) {
+                @media (min-width:$breakpoint-mobile) {
+                    max-width: 100%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    }
+            
+                }
         }
         
     }

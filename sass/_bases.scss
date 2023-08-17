@@ -75,13 +75,7 @@ $card-restaurant-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0
 $img-restaurants: (img1: restaurant--1, img2: restaurant--2, img3: restaurant--3, img4: restaurant--4);
 
 
-//mixins
-// @mixin section-title {
-//     font-size: $big-title-font-size-mobile;
-//     font-weight: $bold-font-weight;
-//     padding-left: 24px
-// }
-
+////mixins
 @mixin display-flex ($flex-direction, $justify-content: unset, $align-items: unset) {
     display: flex;
     flex-direction: $flex-direction;
@@ -94,28 +88,10 @@ $img-restaurants: (img1: restaurant--1, img2: restaurant--2, img3: restaurant--3
     text-decoration: none;
 }
 
-// @mixin menu-title {
-//     font-size: $small-title-font-size;
-//     font-weight: $light-font-weight;
-//     text-decoration: $secondary-color solid underline;
-//     text-underline-offset: 5px;
-//     text-decoration-thickness: 3px;
-// }
+@mixin overflow-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
-// @mixin logo-header {
-//      background-color: $white-color;
-//      width: 45%;
-// }
-
-// @mixin logo-footer {
-
-// }
-
-// @mixin no-padding ($breakpoint) {
-//     @if $breakpoint <= 320 {
-//         padding-right: 0;
-//     }
-// }
-
-//functions
+}
 

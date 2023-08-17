@@ -1,5 +1,5 @@
 .card__dish {
-    @include display-flex(row);
+    @include display-flex(row,space-between);
     background-color: $white-color;
     border-radius: $card-radius;
     cursor: pointer;
@@ -8,18 +8,20 @@
         @include display-flex(row, space-between);
         width: 100%;
         padding: 15px;
-        column-gap: 15px;
-        // flex-grow: 1;
-        // flex-shrink: 1;
+        column-gap: 9px;
+        overflow: hidden;
 
         .dish__content {
-            flex-grow: 1;
+            width: 80%;
+
             .dish__title {
-                font-size: $medium-title-font-size;
+            @include overflow-ellipsis;
+            font-size: $medium-title-font-size;
             }
 
             .dish__description {
-                font-size: $normal-text-font-size;
+                @include overflow-ellipsis;
+                font-size: $normal-text-font-size - 1px;
                 font-weight: $light-font-weight;
             }
         }
@@ -38,12 +40,11 @@
         border-radius: 0 15px 15px 0;
         width: 0%;
 
-        transition: all .5s;
+        transition: all ease-out .5s;
        
 
         .checked__icon {
             align-self: center;
-            // color:$white-color;  
             color: transparent; 
             font-weight: $bold-font-weight;
             border: none;
@@ -54,12 +55,12 @@
 
 .card__dish:hover {
     .card__dish__info {
+        @include overflow-ellipsis;
         width: calc(85% - 15px);
         max-width: calc(85% - 15px);
 
         .dish__content {
             .dish__description{
-                // @media (max-width:$breakpoint-large-mobile) {
                 @media (min-width:$breakpoint-mobile) {
                     max-width: 100%;
                     text-overflow: ellipsis;
@@ -75,7 +76,7 @@
         @media (min-width:$breakpoint-mobile) {
             width: 15%;
         }
-        @media (min-width:$breakpoint-desktop) {
+        @media (min-width:$breakpoint-tablet) {
             width: 10%;
         }
             .checked__icon {
@@ -84,3 +85,5 @@
         
     }
 }
+
+

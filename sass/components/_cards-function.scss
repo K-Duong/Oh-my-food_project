@@ -26,16 +26,9 @@
         box-shadow: $fonctionnement-shadow;
         font-weight: $medium-font-weight; 
 
-        // FIXME: ajouter les styles pour adapter aux tailles > 1440px; 
-        // @media (min-width: 1440px) {
-        //     padding: 28px 35px 28px 25px;
-        // }
         .fa--grey {
             color: $icon-grey-color;
         }
-        // .function__icon--violet {
-        //     color: $primary-color;
-        // }
         .function__text {
             font-size: 16px;
         }    

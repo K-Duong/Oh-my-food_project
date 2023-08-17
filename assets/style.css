@@ -608,7 +608,7 @@ a:hover:visited {
 .card__dish {
   display: flex;
   flex-direction: row;
-  justify-content: unset;
+  justify-content: space-between;
   align-items: unset;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -621,16 +621,23 @@ a:hover:visited {
   align-items: unset;
   width: 100%;
   padding: 15px;
-  column-gap: 15px;
+  column-gap: 9px;
+  overflow: hidden;
 }
 .card__dish__info .dish__content {
-  flex-grow: 1;
+  width: 80%;
 }
 .card__dish__info .dish__content .dish__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 18px;
 }
 .card__dish__info .dish__content .dish__description {
-  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15px;
   font-weight: 300;
 }
 .card__dish__info .dish__price {
@@ -646,7 +653,7 @@ a:hover:visited {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   width: 0%;
-  transition: all 0.5s;
+  transition: all ease-out 0.5s;
 }
 .card__dish__checked .checked__icon {
   align-self: center;
@@ -657,6 +664,9 @@ a:hover:visited {
 }
 
 .card__dish:hover .card__dish__info {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   width: calc(85% - 15px);
   max-width: calc(85% - 15px);
 }
@@ -673,7 +683,7 @@ a:hover:visited {
     width: 15%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .card__dish:hover .card__dish__checked {
     width: 10%;
   }

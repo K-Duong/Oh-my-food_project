@@ -13,13 +13,15 @@
     }
 
     .fa-heart--fill{
+        @include background-gradiant-text;
         position: absolute;
         font-size: 21px;
-        background-image: $btn-gradiant;
-        background-size:cover;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        // background-image: $btn-gradiant;
+        // background-size:cover;
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // color: transparent;
+        
         transform: scale(1.1);
         opacity: 0;
         transition: all .2s;

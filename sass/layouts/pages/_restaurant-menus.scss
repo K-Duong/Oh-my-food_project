@@ -7,8 +7,7 @@
         padding: 0 15px;
         @include display-flex(column);
         row-gap: 15px;
-    
-        
+       
     
         &__header {
             @include display-flex(column);
@@ -26,6 +25,19 @@
     
         }
     }
+
+    .card__menus__entree {
+      @include appear-menus(0s);
+      
+    }
+    .card__menu__plats {
+      @include appear-menus(0.7s);
+    
+    }
+    .card__menu__desserts {
+      @include appear-menus(1.7s);
+     
+    }
     @media (min-width: $breakpoint-mobile) {
       // height: 275px;
     }
@@ -35,3 +47,5 @@
     margin: auto;
     } 
   }
+
+ 

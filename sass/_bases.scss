@@ -101,3 +101,44 @@ $img-restaurants: (img1: restaurant--1, img2: restaurant--2, img3: restaurant--3
     -webkit-background-clip: text;
     color: transparent;
 }
+
+@keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(200px)
+    }
+    
+    50% {
+      opacity: 0.5;
+      transform: translateY(120px)
+    }
+    
+    75% {
+      opacity: 0.7;
+      transform: translateY(60px)
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px)
+    }
+  
+  }
+
+  @keyframes display-none {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  
+@mixin appear-menus ($delay) {
+    opacity: 1;
+    animation: slide-up 1s linear $delay, display-none $delay linear;
+
+}
+//   @function appear-menus {
+//     opacity: 1;
+//   }

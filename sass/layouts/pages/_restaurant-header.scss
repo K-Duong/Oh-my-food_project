@@ -1,28 +1,5 @@
-// .main__restaurant {
-//     @include flex-col-unset;
-  
-//     &__img {
-//       @media (min-width: $breakpoint-mobile) {
-       
-//       }
-//       @media (min-width: $breakpoint-desktop) {
-        
-//       }
-//       .restaurant__cover {
-//         width: 100%;
-//         object-fit: cover;
-  
-//         @media (min-width: $breakpoint-mobile) {
-//           height: 275px;
-//         }
-//         @media (min-width: $breakpoint-desktop) {
-//           height: 375px;
-//         }  
-//       }
-//     }
-  
+
 .main__restaurant__content {
-    //   @include flex-col-unset;
     @include display-flex(column);
 
 

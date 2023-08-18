@@ -1,6 +1,7 @@
 @import "_bases.scss";
 
 //LAYOUTS
+
     //body
     @import "layouts/body";
     //header
@@ -9,6 +10,7 @@
     @import "layouts/footer";
 
     //home page
+    @import "layouts/homePage/main-hp-container";
     @import "layouts/homePage/main-hp-presentation";
     @import "layouts/homePage/main-hp-function";
     @import "layouts/homePage/main-hp-restaurants";

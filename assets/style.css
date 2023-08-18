@@ -501,6 +501,7 @@ a:hover:visited {
   color: transparent;
   transform: scale(1.1);
   opacity: 0;
+  transition: all 0.2s;
 }
 
 .icon-favorite:hover .fa-heart--empty {

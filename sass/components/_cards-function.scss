@@ -58,16 +58,18 @@
 
 @media (min-width: $breakpoint-desktop) {
     .function__description__element {
-        width: 32%;
-    }
+        width: 30%;
 
-    .function__content {
-        padding: 28px 35px 28px 20px;
+        .function__content {
+            padding: 28px 21px;
+            column-gap: 21px;
+        }
     }
+ 
 }
 
-@media (min-width: $breakpoint-large-desktop) {
-    .function__content {
-    padding: 28px 35px 28px 25px;
-    }
-}
+// @media (min-width: $breakpoint-large-desktop) {
+//     .function__content {
+//     padding: 28px 35px 28px 25px;
+//     }
+// }

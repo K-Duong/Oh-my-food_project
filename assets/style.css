@@ -239,6 +239,15 @@ a:hover:visited {
     padding-right: 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .homePage__function__box {
+    width: 45%;
+    margin: auto;
+  }
+  .section__title {
+    text-align: center;
+  }
+}
 @media (min-width: 1024px) {
   .homePage__function {
     padding: 50px 50px;
@@ -560,15 +569,11 @@ a:hover:visited {
 }
 @media (min-width: 1024px) {
   .function__description__element {
-    width: 32%;
+    width: 30%;
   }
-  .function__content {
-    padding: 28px 35px 28px 20px;
-  }
-}
-@media (min-width: 1440px) {
-  .function__content {
-    padding: 28px 35px 28px 25px;
+  .function__description__element .function__content {
+    padding: 28px 21px;
+    column-gap: 21px;
   }
 }
 .restaurant__card {

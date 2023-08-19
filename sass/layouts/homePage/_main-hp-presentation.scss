@@ -3,19 +3,19 @@
   }
   
 .homePage__location {
-@include display-flex(row, center, center);
-background-color: $bg-medium-grey-color;
-width: 100%;
-column-gap: 17px;
-padding: 15px 0;
+    @include display-flex(row, center, center);
+    background-color: $bg-medium-grey-color;
+    width: 100%;
+    column-gap: 17px;
+    padding: 15px 0;
 
-font-size: $normal-text-font-size;
-font-weight: $medium-font-weight;
+    font-size: $normal-text-font-size;
+    font-weight: $medium-font-weight;
 
     .location__text {
-border: none;
-background-color: $bg-medium-grey-color;
-color: $black-color;
+        border: none;
+        background-color: $bg-medium-grey-color;
+        color: $black-color;
     }
 
     .location__text::placeholder {

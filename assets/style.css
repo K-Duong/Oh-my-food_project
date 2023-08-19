@@ -24,6 +24,54 @@
     opacity: 0;
   }
 }
+@keyframes loading-page {
+  from {
+    z-index: 0;
+  }
+  to {
+    z-index: 1;
+  }
+}
+@keyframes spinners {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes close-modal {
+  from {
+    position: fixed;
+    opacity: 1;
+    z-index: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.05;
+  }
+  80% {
+    opacity: 0.02;
+  }
+  90% {
+    opacity: 0.01;
+  }
+  95% {
+    opacity: 0.001;
+  }
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -178,18 +226,9 @@ a:hover:visited {
 .homePage__container {
   z-index: 1;
   animation-name: loading-page;
-  animation-timing-function: 1;
   animation-duration: 5s;
 }
 
-@keyframes loading-page {
-  from {
-    z-index: 0;
-  }
-  to {
-    z-index: 1;
-  }
-}
 .section__title {
   font-size: 24px;
 }
@@ -509,46 +548,6 @@ a:hover:visited {
   animation-iteration-count: 5;
 }
 
-@keyframes spinners {
-  from {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes close-modal {
-  from {
-    position: fixed;
-    opacity: 1;
-    z-index: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  75% {
-    opacity: 0.05;
-  }
-  80% {
-    opacity: 0.02;
-  }
-  90% {
-    opacity: 0.01;
-  }
-  95% {
-    opacity: 0.001;
-  }
-  to {
-    opacity: 0;
-    z-index: 0;
-  }
-}
 .btn {
   background-image: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
   background-size: 250%;

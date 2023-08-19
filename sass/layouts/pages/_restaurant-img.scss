@@ -1,8 +1,6 @@
 .main__restaurant {
-    // @include flex-col-unset;
     @include display-flex(column);
 
-  
     &__img {
       @media (min-width: $breakpoint-mobile) {
        

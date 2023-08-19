@@ -7,8 +7,9 @@
     row-gap: 25px;
     }
   }
+
+//   Media queries
   
-// TODO: repetition of code for responsive design, how to fix that ? create a function(param = breakpoint) if else statement to set padding ?
 @media (min-width: $breakpoint-mobile) {  
     .homePage__restaurants {
         padding: 45px 25px;
@@ -30,7 +31,6 @@
         padding: 30px 50px;
 
         &__box {
-
             .restaurants__cards {
                 @include display-flex(row);
                 justify-content: space-between;

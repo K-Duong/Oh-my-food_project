@@ -2,12 +2,12 @@
     @include display-flex(row);
    
     .function__number {
-      
         @include display-flex(row, center, center);
         align-self: center;
         min-width: 24px;;
         width: 24px;
         height: 24px;
+
         border-radius: 50%;
         color: $white-color;
         background-color: $primary-color;
@@ -41,9 +41,8 @@
     }
 }
 
-
-
-@media (min-width: $breakpoint-mobile   ) { 
+// Media queries
+@media (min-width: $breakpoint-mobile) { 
     .function__description__element {
         width: 100%; 
     }
@@ -67,9 +66,3 @@
     }
  
 }
-
-// @media (min-width: $breakpoint-large-desktop) {
-//     .function__content {
-//     padding: 28px 35px 28px 25px;
-//     }
-// }

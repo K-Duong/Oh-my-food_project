@@ -30,7 +30,6 @@
             align-self: flex-end;
             font-weight: $bold-font-weight;
         }
-
     }
 
     &__checked {
@@ -41,7 +40,6 @@
         width: 0%;
 
         transition: all ease-out .5s;
-       
 
         .checked__icon {
             align-self: center;
@@ -68,20 +66,24 @@
                     overflow: hidden;
                     }
             
-                }
+            }
         }
         
     }
+
     .card__dish__checked{
+
         @media (min-width:$breakpoint-mobile) {
             width: 15%;
         }
+
         @media (min-width:$breakpoint-tablet) {
             width: 10%;
         }
-            .checked__icon {
-                color:$white-color;  
-            }
+        
+        .checked__icon {
+            color:$white-color;  
+        }
         
     }
 }

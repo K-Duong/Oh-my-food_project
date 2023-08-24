@@ -38,6 +38,7 @@
         background-color: $light-green-color; 
         border-radius: 0 15px 15px 0;
         width: 0%;
+       
 
         transition: all ease-out .5s;
 
@@ -52,29 +53,11 @@
 }
 
 .card__dish:hover {
-    .card__dish__info {
-        @include overflow-ellipsis;
-        width: calc(85% - 15px);
-        max-width: calc(85% - 15px);
-
-        .dish__content {
-            .dish__description{
-                @media (min-width:$breakpoint-mobile) {
-                    max-width: 100%;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    }
-            
-            }
-        }
-        
-    }
 
     .card__dish__checked{
 
         @media (min-width:$breakpoint-mobile) {
-            width: 15%;
+            width: 20%;
         }
 
         @media (min-width:$breakpoint-tablet) {

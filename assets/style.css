@@ -226,7 +226,7 @@ a:hover:visited {
 .homePage__container {
   z-index: 1;
   animation-name: loading-page;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 .section__title {
@@ -533,13 +533,12 @@ a:hover:visited {
   background-color: #F6F6F6;
   animation-name: close-modal;
   animation-iteration-count: 1;
-  animation-duration: 7s;
+  animation-duration: 4s;
   animation-timing-function: ease-in-out;
 }
 .modal .spinners {
   background-image: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   background-size: cover;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   animation-name: spinners;
@@ -603,6 +602,7 @@ a:hover:visited {
 
 .icon-favorite {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -614,15 +614,11 @@ a:hover:visited {
 .icon-favorite .fa-heart--fill {
   background-image: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   background-size: cover;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   position: absolute;
   font-size: 21px;
-  transform: scale(1.1);
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 1s;
 }
 
 .icon-favorite:hover .fa-heart--empty {
@@ -630,17 +626,24 @@ a:hover:visited {
 }
 .icon-favorite:hover .fa-heart--fill {
   opacity: 1;
-  animation-name: fill-heart;
-  animation-timing-function: linear;
-  animation-duration: 1s;
+  animation: fill-heart linear 0.7s;
 }
 
 @keyframes fill-heart {
   from {
     opacity: 0.2;
   }
+  25% {
+    opacity: 0.25;
+  }
   50% {
-    opacity: 0.7;
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 0.8;
   }
   to {
     opacity: 1;
@@ -804,24 +807,9 @@ a:hover:visited {
   font-size: 18px;
 }
 
-.card__dish:hover .card__dish__info {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: calc(85% - 15px);
-  max-width: calc(85% - 15px);
-}
-@media (min-width: 320px) {
-  .card__dish:hover .card__dish__info .dish__content .dish__description {
-    max-width: 100%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
 @media (min-width: 320px) {
   .card__dish:hover .card__dish__checked {
-    width: 15%;
+    width: 20%;
   }
 }
 @media (min-width: 768px) {

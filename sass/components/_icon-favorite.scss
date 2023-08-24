@@ -1,7 +1,5 @@
 .icon-favorite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex (row, center, center);
     cursor: pointer;
     
     .fa-heart--empty {
@@ -14,12 +12,7 @@
         position: absolute;
         font-size: 21px;
         
-        transform: scale(1.1);
         opacity: 0;
-        transition-property: opacity;
-        transition-duration: 1s;
-
-        
     }
 }
 
@@ -30,9 +23,7 @@
 
     .fa-heart--fill{
         opacity: 1;
-        animation-name: fill-heart;
-        animation-timing-function: linear;
-        animation-duration: 1s;
+        animation: fill-heart linear .7s;
     }
 }
 
@@ -40,8 +31,17 @@
     from {
         opacity: 0.2
     }
+    25% {
+        opacity: 0.25;
+    }
     50% {
-        opacity: 0.7;
+        opacity: 0.3;   
+    }
+    75% {
+        opacity: 0.5;   
+    }
+    85% {
+        opacity: 0.8;   
     }
     to {
         opacity: 1

@@ -1,7 +1,6 @@
 .modal {
     position:fixed;
     display: flex;
-    // display: none;
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -13,7 +12,7 @@
 
     animation-name: close-modal;
     animation-iteration-count: 1;
-    animation-duration: 7s;
+    animation-duration: 4s;
     animation-timing-function: ease-in-out;
    
 

@@ -797,7 +797,6 @@ a:hover:visited {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   width: 0%;
-  transition: all ease-out 0.5s;
 }
 .card__dish__checked .checked__icon {
   align-self: center;
@@ -808,17 +807,45 @@ a:hover:visited {
 }
 
 @media (min-width: 320px) {
-  .card__dish:hover .card__dish__checked {
-    width: 20%;
+  .card__dish:hover .card__dish__checked,
+  .card__dish:active .card__dish__checked {
+    animation: check-pop-up-mobile linear 0.7s;
   }
 }
 @media (min-width: 768px) {
-  .card__dish:hover .card__dish__checked {
+  .card__dish:hover .card__dish__checked,
+  .card__dish:active .card__dish__checked {
+    animation: check-pop-up-desktop linear 0.7s;
+  }
+}
+.card__dish:hover .card__dish__checked .checked__icon,
+.card__dish:active .card__dish__checked .checked__icon {
+  animation: btn-check-appear linear 0.7s;
+}
+
+@keyframes check-pop-up-mobile {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes check-pop-up-desktop {
+  from {
+    width: 0%;
+  }
+  to {
     width: 10%;
   }
 }
-.card__dish:hover .card__dish__checked .checked__icon {
-  color: #FFFFFF;
+@keyframes btn-check-appear {
+  from {
+    color: transparent;
+  }
+  to {
+    color: #FFFFFF;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

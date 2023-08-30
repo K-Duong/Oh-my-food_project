@@ -40,7 +40,7 @@
         width: 0%;
        
 
-        transition: all ease-out .5s;
+        // transition: all ease-out .5s;
 
         .checked__icon {
             align-self: center;
@@ -52,23 +52,52 @@
     }
 }
 
-.card__dish:hover {
+.card__dish:hover,
+.card__dish:active
+ {
 
     .card__dish__checked{
 
         @media (min-width:$breakpoint-mobile) {
-            width: 20%;
+            animation: check-pop-up-mobile linear .7s;
         }
 
         @media (min-width:$breakpoint-tablet) {
-            width: 10%;
+            animation: check-pop-up-desktop linear .7s;
+            // animation: check-pop-up-desktop linear;
         }
         
         .checked__icon {
-            color:$white-color;  
+           animation: btn-check-appear linear .7s;
         }
         
     }
 }
 
 
+@keyframes check-pop-up-mobile {
+    from {
+        width: 0%;
+    }
+    to {
+        width:20% ;
+    }
+}
+
+@keyframes check-pop-up-desktop {
+    from {
+        width: 0%;
+    }
+    to {
+        width:10% ;
+    }
+}
+
+@keyframes btn-check-appear {
+    from {
+        color:transparent;
+    }
+    to {
+        color:$white-color;  
+    }
+}
